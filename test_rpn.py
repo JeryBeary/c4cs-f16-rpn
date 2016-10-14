@@ -4,7 +4,7 @@ import rpn
 
 class TestBasics(unittest.TestCase):
 	def test_add(self):
-		result = rpn.calculator("1 1 +")
+		result = rpn.calculate("1 1 +")
 		self.assertEqual(2, result)
 	def test_subtract(self):
 		result = rpn.calculate("5 3 -")
@@ -15,6 +15,6 @@ class TestBasics(unittest.TestCase):
 	def test_divide(self):
 		result = rpn.calculate("6 3 /")
 		self.assertEqual(2, result)
-	def test_toomanythings(self):
+	def test_badstring(self):
 		with self.assertRaises(TypeError):
 			rpn.calculate("1 2 3 +")
