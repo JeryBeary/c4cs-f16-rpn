@@ -4,5 +4,5 @@ python:
   - "3.5-dev" # 3.5 development branch
 script: make test
 notifications:
-	email: false
+  email: false
 
